@@ -1,0 +1,249 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@import "tailwindcss";
+
+/* Theme, content globs, and plugins are declared in tailwind.config.ts. */
+@config "../tailwind.config.ts";
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+
+  html body #root .safezone,
+html body #root .safezone * {
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    text-align: left !important;
+    text-align-last: left !important;
+    text-justify: auto !important;
+  }
+
+  #root .safezone :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: normal;
+    word-break: normal;
+    text-align: left !important;
+    text-align-last: left !important;
+    text-justify: auto !important;
+  }
+
+  html body #root .safezone .safezone-report,
+  html body #root .safezone .safezone-report * {
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    text-align: left !important;
+    text-align-last: left !important;
+    text-justify: auto !important;
+  }
+
+  html body #root .safezone .safezone-report .report-category {
+    text-align: center !important;
+  }
+
+  html body #root .safezone.safezone-light {
+    background-color: #f1f5f9 !important;
+    color: #1e293b !important;
+  }
+
+  html body #root .safezone.safezone-light [class~="bg-[#0d0d15]"] {
+    background-color: #f1f5f9 !important;
+  }
+
+  html body #root .safezone.safezone-light [class*="bg-[#161625]"] {
+    background-color: #ffffff !important;
+  }
+
+  html body #root .safezone.safezone-light [class*="bg-[#1e1e32]"] {
+    background-color: #f8fafc !important;
+  }
+
+  html body #root .safezone.safezone-light [class*="bg-[#24243a]"],
+  html body #root .safezone.safezone-light [class*="bg-[#25263a]"],
+  html body #root .safezone.safezone-light [class*="bg-[#28283e]"],
+  html body #root .safezone.safezone-light [class*="bg-[#292940]"],
+  html body #root .safezone.safezone-light [class*="bg-[#353550]"] {
+    background-color: #e2e8f0 !important;
+  }
+
+  html body #root .safezone.safezone-light .text-white,
+  html body #root .safezone.safezone-light.text-white {
+    color: #1e293b !important;
+  }
+
+  html body #root .safezone.safezone-light [class*="bg-[#d71920]"],
+  html body #root .safezone.safezone-light [class*="bg-red-600"],
+  html body #root .safezone.safezone-light [class*="bg-red-500"] {
+    color: #ffffff !important;
+  }
+
+  html body #root .safezone.safezone-light [class*="bg-black/"] {
+    color: #ffffff !important;
+  }
+
+  html body #root .safezone.safezone-light [class*="border-[#2e2e4a]"],
+  html body #root .safezone.safezone-light [class*="border-[#3a3a57]"],
+  html body #root .safezone.safezone-light [class*="border-[#34344e]"] {
+    border-color: #cbd5e1 !important;
+  }
+
+  html body #root .safezone.safezone-light .text-slate-200,
+  html body #root .safezone.safezone-light .text-slate-300 {
+    color: #334155 !important;
+  }
+
+  html body #root .safezone.safezone-light .text-slate-400,
+  html body #root .safezone.safezone-light .text-slate-500 {
+    color: #64748b !important;
+  }
+
+  html body #root .safezone.safezone-light [class*="bg-black/"] .text-white,
+  html body #root .safezone.safezone-light [class*="bg-[#d71920]"] .text-white {
+    color: #ffffff !important;
+  }
+
+  html body #root .safezone.safezone-light input,
+  html body #root .safezone.safezone-light textarea,
+  html body #root .safezone.safezone-light select {
+    color: #1e293b !important;
+  }
+
+  html body #root .safezone.safezone-light input::placeholder,
+  html body #root .safezone.safezone-light textarea::placeholder {
+    color: #64748b !important;
+  }
+
+  .safezone-route-line {
+    stroke-dasharray: 14 10;
+    animation: safezone-route-flow 1.1s linear infinite;
+  }
+
+  @keyframes safezone-route-flow {
+    to {
+      stroke-dashoffset: -48;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .safezone-route-line {
+      animation: none;
+    }
+  }
+}
+
+html body #root .safezone,
+html body #root .safezone * {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  text-align: left !important;
+    text-align-last: left !important;
+    text-justify: auto !important;
+}
