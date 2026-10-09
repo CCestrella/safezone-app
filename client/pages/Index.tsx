@@ -672,7 +672,7 @@ function ReportHazard({ onCancel }: { onCancel: () => void }) {
 
 export default function Index() {
   const [activeNav, setActiveNav] = useState("Map");
-  const [lightMode, setLightMode] = useState(false);
+  const [lightMode, setLightMode] = useState(true);
   const [activeLayers, setActiveLayers] = useState(["Falling Objects", "Active Work Fronts"]);
   const [search, setSearch] = useState("");
   const [showAllAlerts, setShowAllAlerts] = useState(true);
