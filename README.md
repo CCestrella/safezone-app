@@ -50,28 +50,35 @@ SafeZone brings critical safety information together in a single interface, enab
 ## 🖼️ Screenshots
 Interactive Real-time Dashboard
 
-<img width="1826" height="906" alt="image" src="https://github.com/user-attachments/assets/b490c118-110c-4317-af85-518d58cb356a" />
+<img width="1894" height="902" alt="image" src="https://github.com/user-attachments/assets/d586dbc8-df1b-4a63-874b-23c468d4c3cb" />
+
 
 Reporting View
 
-<img width="1798" height="906" alt="image" src="https://github.com/user-attachments/assets/7533c6b4-e3a5-4f4a-a423-746e30a09fb9" />
+<img width="1584" height="843" alt="image" src="https://github.com/user-attachments/assets/f493b33d-5c13-4dc4-8d72-6caaa8257b7c" />
+
 
 Alerts
 
-<img width="1812" height="897" alt="image" src="https://github.com/user-attachments/assets/d00fcf4c-ddd4-4753-838c-5c954a5128b6" />
+<img width="1910" height="828" alt="image" src="https://github.com/user-attachments/assets/08b5e16e-02bc-444b-9f3e-8f3491c4ed48" />
+
 
 Smart Route Planner
+<img width="1898" height="834" alt="image" src="https://github.com/user-attachments/assets/32d82413-aee9-467d-aa40-b229c54951dd" />
 
-<img width="1826" height="893" alt="image" src="https://github.com/user-attachments/assets/1bb0bd44-0358-4696-9fdf-0a17a17cefeb" />
-<img width="1818" height="904" alt="image" src="https://github.com/user-attachments/assets/75a46ab3-65fc-404c-94ce-4f49a84f5228" />
+<img width="1904" height="839" alt="image" src="https://github.com/user-attachments/assets/1aa13017-d6b9-4da0-93e5-ab2bc3dbe84b" />
+
 
 People On-site View
 
-<img width="1815" height="840" alt="image" src="https://github.com/user-attachments/assets/efdf9afb-cdc8-4858-bc16-cd0133d43f2f" />
+<img width="1808" height="836" alt="image" src="https://github.com/user-attachments/assets/cf472975-3774-4811-9af2-16c1b60022f1" />
+
 
 Incidents View
 
-<img width="1813" height="695" alt="image" src="https://github.com/user-attachments/assets/aeec4cee-fdf5-4ece-a90b-5c7728160461" />
+<img width="1822" height="712" alt="image" src="https://github.com/user-attachments/assets/08a40e26-2510-4efe-9b51-1f1024a46d36" />
+<img width="1753" height="915" alt="image" src="https://github.com/user-attachments/assets/b6b281a6-5a60-426a-a8e6-398f49b92773" />
+
 
 
 ## Built With
