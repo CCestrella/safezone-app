@@ -3,15 +3,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build",
-    "build:server": "vite build --config vite.config.server.ts",
-    "start": "node dist/server/node-build.mjs",
-    "test": "vitest --run",
-    "format.fix": "prettier --write .",
-    "typecheck": "tsc"
-  },
+  "dev": "vite",
+  "build": "npm run build:client && npm run build:server",
+  "build:client": "vite build",
+  "build:server": "vite build --config vite.config.server.ts",
+  "start": "node dist/server/node-build.mjs",
+  "test": "vitest --run",
+  "format.fix": "prettier --write .",
+  "typecheck": "tsc",
+
+  "predeploy": "npm run build:client",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
@@ -96,11 +99,6 @@
   "pkg": {
     "assets": [
       "dist/spa/*"
-    ],
-    "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
-}
-}
+    ]
+    
+  }}
