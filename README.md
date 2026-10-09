@@ -1,8 +1,8 @@
-# 🛡️ SafeZone
+# SafeZone
 
 SafeZone is a mining safety intelligence prototype designed to help workers and supervisors identify hazards, visualise risk exposure, and make safer operational decisions in real time.
 
-## 🌟 Overview
+## Overview
 
 Mining environments contain constantly changing risks including:
 
@@ -86,7 +86,7 @@ Incidents View
 
 ## Live Demo
 
-[View SafeZone](https://ccestrellaone-app/
+[View SafeZone](https://ccestrella.github.io/safezone-app/)
 
 
 ## 📈 Future Enhancements
