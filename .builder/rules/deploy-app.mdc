@@ -1,12 +1,15 @@
 ---
 name: deploy-app
 description: How to deploy the app to production using Netlify or Vercel to make the site live
+globs:
+alwaysApply: true
 ---
 
 Deploying the app to production is powered by either Netlify or Vercel through MCP (Model Context Protocol) integrations:
 
 **For Netlify:**
 
+- If the user asks to deploy the app, use the appropriate Netlify MCP tools.
 - If the Netlify tools are not available, tell the user to [Connect Netlify MCP](#open-mcp-popover).
 - **The operations you need are fields inside a few domain tools, not tools of their own.** `create-new-project`, `get-projects` and `manage-env-vars` never appear in the tool list — they are `operation` values passed to the tools below, so search for the tool and select the operation:
   - list existing sites — `mcp__netlify__netlify-project-services-reader` with `{"selectSchema":{"operation":"get-projects","params":{}}}`
@@ -21,6 +24,7 @@ Deploying the app to production is powered by either Netlify or Vercel through M
 
 **For Vercel:**
 
+- If the user asks to deploy the app, use the appropriate Vercel MCP tools.
 - If the Vercel tools are not available, tell the user to [Connect Vercel MCP](#open-mcp-popover).
 - **Before deploying**, sync the project's environment variables (from `<environment_variables>`) to the Vercel project using the Vercel MCP env var tools. Any env vars the app depends on locally must also be set on Vercel so they are available during the build and at runtime. This applies to all integrations — Supabase, Neon, Stripe, or any other service that provides env vars. For secret variables (shown with an empty value and a `# secret` comment), pass `REPLACE_ENV.KEY_NAME` as the value to the MCP tool so the runtime can resolve the real secret. Never pass the literal empty value for secrets. Skip platform-specific variables like `VERCEL_*`, `NODE_ENV`, or variables that are only relevant to the local dev environment.
 - Once env vars are synced, use the appropriate Vercel MCP tools to deploy the app.

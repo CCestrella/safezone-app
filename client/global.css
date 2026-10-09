@@ -1,5 +1,5 @@
 /** @import must precede all other statements */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap");
 
 @import "tailwindcss";
 
@@ -106,6 +106,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Noto Sans", sans-serif;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
@@ -179,7 +180,7 @@ html body #root .safezone * {
     color: #1e293b !important;
   }
 
-  html body #root .safezone.safezone-light [class*="bg-[#d71920]"],
+  html body #root .safezone.safezone-light [class*="bg-[#A20D32]"],
   html body #root .safezone.safezone-light [class*="bg-red-600"],
   html body #root .safezone.safezone-light [class*="bg-red-500"] {
     color: #ffffff !important;
@@ -206,7 +207,7 @@ html body #root .safezone * {
   }
 
   html body #root .safezone.safezone-light [class*="bg-black/"] .text-white,
-  html body #root .safezone.safezone-light [class*="bg-[#d71920]"] .text-white {
+  html body #root .safezone.safezone-light [class*="bg-[#A20D32]"] .text-white {
     color: #ffffff !important;
   }
 
